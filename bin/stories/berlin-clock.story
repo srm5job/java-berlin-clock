@@ -44,5 +44,48 @@ RRRR
 OOOOOOOOOOO
 OOOO
 
+Scenario: Just After Midnight
+When the time is 00:10:00
+Then the clock should look like
+Y
+OOOO
+OOOO
+YYOOOOOOOOO
+OOOO
 
+Scenario: Afternoon
+When the time is 12:00:00
+Then the clock should look like
+Y
+RROO
+RROO
+OOOOOOOOOOO
+OOOO
+
+Scenario: Dawn
+When the time is 04:00:00
+Then the clock should look like
+Y
+OOOO
+RRRR
+OOOOOOOOOOO
+OOOO
+
+Scenario: Random_1
+When the time is 04:04:04
+Then the clock should look like
+Y
+OOOO
+RRRR
+OOOOOOOOOOO
+YYYY
+
+Scenario: Random_2
+When the time is 00:59:59
+Then the clock should look like
+O
+OOOO
+OOOO
+YYRYYRYYRYY
+YYYY
 

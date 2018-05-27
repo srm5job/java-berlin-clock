@@ -8,29 +8,27 @@ import static com.ubs.opsit.interviews.support.BehaviouralTestEmbedder.aBehaviou
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Acceptance test class that uses the JBehave (Gerkin) syntax for writing stories.  You should not need to
- * edit this class to complete the exercise, this is your definition of done.
+ * Acceptance test class that uses the JBehave (Gerkin) syntax for writing
+ * stories. You should not need to edit this class to complete the exercise,
+ * this is your definition of done.
  */
 public class BerlinClockFixture {
 
-    private TimeConverter berlinClock;
-    private String theTime;
+	private TimeConverter berlinClock = new BerlinClockTimeConverter(); // To make build successful
+	private String theTime;
 
-    @Test
-    public void berlinClockAcceptanceTests() throws Exception {
-        aBehaviouralTestRunner()
-                .usingStepsFrom(this)
-                .withStory("berlin-clock.story")
-                .run();
-    }
+	@Test
+	public void berlinClockAcceptanceTests() throws Exception {
+		aBehaviouralTestRunner().usingStepsFrom(this).withStory("berlin-clock.story").run();
+	}
 
-    @When("the time is $time")
-    public void whenTheTimeIs(String time) {
-        theTime = time;
-    }
+	@When("the time is $time")
+	public void whenTheTimeIs(String time) {
+		theTime = time;
+	}
 
-    @Then("the clock should look like $")
-    public void thenTheClockShouldLookLike(String theExpectedBerlinClockOutput) {
-        assertThat(berlinClock.convertTime(theTime)).isEqualTo(theExpectedBerlinClockOutput);
-    }
+	@Then("the clock should look like $")
+	public void thenTheClockShouldLookLike(String theExpectedBerlinClockOutput) {
+		assertThat(berlinClock.convertTime(theTime)).isEqualTo(theExpectedBerlinClockOutput);
+	}
 }
