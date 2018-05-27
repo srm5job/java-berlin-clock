@@ -54,7 +54,7 @@ public class BerlinClockTimeConverter implements TimeConverter {
 	public String convertTime(String aTime) {
 
 		validateInput(aTime);
-		
+
 		String[] tcomponents = aTime.split(":");
 		int hours, minutes, seconds = 0;
 		try {
@@ -65,7 +65,8 @@ public class BerlinClockTimeConverter implements TimeConverter {
 			throw new IllegalArgumentException("Time value must be numeric");
 		}
 
-		// LocalTime time = LocalTime.parse(aTime, DateTimeFormatter.ofPattern("HH:mm:ss"));
+		// LocalTime time = LocalTime.parse(aTime,
+		// DateTimeFormatter.ofPattern("HH:mm:ss"));
 
 		// int hours = time.getHour();
 		// int minutes = time.getMinute();
