@@ -1,0 +1,97 @@
+Û2018-05-27T22:03:01.061 | est worker | ClasspathStoryFinder | INFO   - Searching for stories called [berlin-clock.story] in [[C:\Users\Sandeep\Documents\GitHub\java-berlin-clock\build\classes\test, C:\Users\Sandeep\Documents\GitHub\java-berlin-clock\build\resources\test, C:\Users\Sandeep\Documents\GitHub\java-berlin-clock\build\classes\main]] 
+í2018-05-27T22:03:01.079 | est worker | aviouralTestEmbedder | INFO   - Running [BehaviouralTestEmbedder] with spring_stories [[file:/C:/Users/Sandeep/Documents/GitHub/java-berlin-clock/build/resources/test/stories/berlin-clock.story]] 
+!Processing system properties {}
+ÜUsing controls EmbedderControls[batch=false,skip=false,generateViewAfterStories=true,ignoreFailureInStories=false,ignoreFailureInView=false,verboseFailures=false,verboseFiltering=false,storyTimeoutInSecs=300,threads=1]
+yRunning story file:/C:/Users/Sandeep/Documents/GitHub/java-berlin-clock/build/resources/test/stories/berlin-clock.story
+êStory: The Berlin Clock
+(file:/C:/Users/Sandeep/Documents/GitHub/java-berlin-clock/build/resources/test/stories/berlin-clock.story)
+Meta:
+@scope interview
+
+Scenario: Midnight
+When the time is 00:00:00
+Then the clock should look like
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+cOOOO
+
+Scenario: Middle of the afternoon
+When the time is 13:17:01
+Then the clock should look like
+O
+RROO
+RRRO
+YYROOOOOOOO
+`YYOO
+
+Scenario: Just before midnight
+When the time is 23:59:59
+Then the clock should look like
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+TYYYY
+
+Scenario: Midnight
+When the time is 24:00:00
+Then the clock should look like
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
+_OOOO
+
+Scenario: Just After Midnight
+When the time is 00:10:00
+Then the clock should look like
+Y
+OOOO
+OOOO
+YYOOOOOOOOO
+UOOOO
+
+Scenario: Afternoon
+When the time is 12:00:00
+Then the clock should look like
+Y
+RROO
+RROO
+OOOOOOOOOOO
+POOOO
+
+Scenario: Dawn
+When the time is 04:00:00
+Then the clock should look like
+Y
+OOOO
+RRRR
+OOOOOOOOOOO
+TOOOO
+
+Scenario: Random_1
+When the time is 04:04:04
+Then the clock should look like
+Y
+OOOO
+RRRR
+OOOOOOOOOOO
+TYYYY
+
+Scenario: Random_2
+When the time is 00:59:59
+Then the clock should look like
+O
+OOOO
+OOOO
+YYRYYRYYRYY
+ò
+(BeforeStories)
+
+
+(AfterStories)
+
+Generating reports view to 'C:\Users\Sandeep\Documents\GitHub\java-berlin-clock\build\classes\jbehave' using formats '[stats, html, console]' and view properties '{defaultFormats=stats, decorateNonHtml=true, viewDirectory=view, decorated=ftl/jbehave-report-decorated.ftl, reports=ftl/jbehave-reports-with-totals.ftl, maps=ftl/jbehave-maps.ftl, navigator=ftl/jbehave-navigator.ftl, views=ftl/jbehave-views.ftl, nonDecorated=ftl/jbehave-report-non-decorated.ftl}'
+iReports view generated with 2 stories (of which 0 pending) containing 16 scenarios (of which 0 pending)
